@@ -1,0 +1,8 @@
+//
+//  Movies.xcconfig
+//  Movies
+//
+//  Created by xdmgzdev on 12/04/2021.
+//
+
+PRODUCT_NAME = $(TARGET_NAME)
