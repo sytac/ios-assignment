@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
+import Common
 
-struct RootContentView: View {
+struct ContentView: View {
   enum TabItem {
     case movies, more
   }
@@ -16,15 +17,15 @@ struct RootContentView: View {
 
   var body: some View {
     TabView(selection: $selectedItem) {
-      MoviesListView()
+      MovieListView()
         .tabItem {
-          Image(systemName: "1.square.fill")
+          Image(systemName: "list.dash")
           Text("movies_tabitem_title".localized)
         }
         .tag(TabItem.movies)
       Text("more_tabitem_title".localized)
         .tabItem {
-          Image(systemName: "2.square.fill")
+          Image(systemName: "ellipsis.circle")
           Text("more_tabitem_title".localized)
         }
         .tag(TabItem.more)
@@ -34,6 +35,6 @@ struct RootContentView: View {
 
 struct RootContentView_Previews: PreviewProvider {
   static var previews: some View {
-    RootContentView()
+    ContentView()
   }
 }

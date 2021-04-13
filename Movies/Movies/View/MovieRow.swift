@@ -1,5 +1,5 @@
 //
-//  MovieCellView.swift
+//  MovieRow.swift
 //  Movies
 //
 //  Created by xdmgzdev on 13/04/2021.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct MovieCellView: View {
-  let movie: Result
+struct MovieRow: View {
+  let movie: Movie
   var body: some View {
     VStack(alignment: .leading, spacing: 10) {
       Text("\(movie.title)")
@@ -21,8 +21,8 @@ struct MovieCellView: View {
   }
 }
 
-struct MovieCellView_Previews: PreviewProvider {
+struct MovieRow_Previews: PreviewProvider {
   static var previews: some View {
-    MovieCellView(movie: Result(title: "Text title", overview: "This an overview of the movie."))
+    MovieRow(movie: Movie(title: "Text title", overview: "This an overview of the movie."))
   }
 }

@@ -6,6 +6,8 @@
   
 */
 
-"movies_list_title" = "Movies";
+"movie_list_title" = "Movies";
 "movies_tabitem_title" = "Movies";
 "more_tabitem_title" = "More";
+"alert_error_title" = "Error";
+"alert_error_message" = "Something went wrong!";
