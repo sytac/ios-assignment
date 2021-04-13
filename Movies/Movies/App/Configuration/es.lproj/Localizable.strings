@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Movies
+
+  Created by xdmgzdev on 13/04/2021.
+  
+*/
+
+"movies_list_title" = "Películas";
+"movies_tabitem_title" = "Películas";
+"more_tabitem_title" = "Mas";
