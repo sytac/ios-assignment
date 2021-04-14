@@ -6,7 +6,8 @@
   
 */
 
-"movie_list_title" = "Películas";
+"movie_popular_title" = "Películas populares";
+"movie_toprated_title" = "Películas mejor calificadas";
 "movies_tabitem_title" = "Películas";
 "more_tabitem_title" = "Mas";
 "alert_error_title" = "Error";

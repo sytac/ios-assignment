@@ -6,7 +6,8 @@
   
 */
 
-"movie_list_title" = "Films";
+"movie_popular_title" = "Populaire films";
+"movie_toprated_title" = "Best beoordeelde films";
 "movies_tabitem_title" = "Movies";
 "more_tabitem_title" = "Meer";
 "alert_error_title" = "Error";

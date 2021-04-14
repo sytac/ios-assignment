@@ -38,16 +38,24 @@ public extension NetworkService {
 
 private extension NetworkService {
   var url: URL? {
-    var urlComponents = URLComponents(string: baseURL)
-    urlComponents?.path = path
-
-    guard let queryParams = queryParameters else {
-      return urlComponents?.url
+    let urlComponents = URLComponents(string: baseURL)
+    guard var components = urlComponents else {
+      return URL(string: baseURL)
     }
 
-    urlComponents?.queryItems?.append(contentsOf: queryParams)
+    components.path = components.path.appending(path)
 
-    return urlComponents?.url
+    guard let queryParams = queryParameters else {
+      return components.url
+    }
+
+    if components.queryItems == nil {
+      components.queryItems = []
+    }
+
+    components.queryItems?.append(contentsOf: queryParams)
+
+    return components.url
   }
 }
 

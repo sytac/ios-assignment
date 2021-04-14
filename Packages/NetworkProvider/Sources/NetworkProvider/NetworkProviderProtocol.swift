@@ -8,7 +8,9 @@
 import Foundation
 
 public protocol NetworkProviderProtocol {
+  var urlSession: SessionProtocol { get }
   var service: NetworkService { get }
+  
   func request<T: Decodable>(
     dataType: T.Type,
     onQueue: DispatchQueue,

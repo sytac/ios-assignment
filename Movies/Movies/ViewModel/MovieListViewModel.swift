@@ -9,22 +9,42 @@ import Common
 import Foundation
 
 class MovieListViewModel: MovieListViewModelProtocol {
-  @Published var title = "Movies".localized
+  @Published var title = "movies_tabitem_title".localized
   @Published var datasource: [Movie] = []
   @Published var showError = false
   var errorMessage: String? = nil
-  private var timer: Timer = Timer()
+  private var repository: MoviesRepositoryProtocol
+
+  init(repository: MoviesRepositoryProtocol = MoviesRepository()) {
+    self.repository = repository
+  }
 
   func loadData() {
-    datasource = Bundle.main.decode(MovieList.self, from: "sample_movie_list.json").results
-    title = "\("Movies".localized) (\(datasource.count))"
-    timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { timer in
-      self.errorMessage = "alert_error_message".localized
-      self.showError.toggle()
+    repository.getPopular(completion: { [weak self] result in
+      guard let self = self else { return }
+
+      switch result {
+      case let .success(list):
+        self.handleSuccess(data: list)
+      case let .failure(error):
+        self.handleFailure(error: error)
+      }
     })
   }
 
   func handleSelectedCell(indexPath: IndexPath) -> Bool {
     return true
+  }
+}
+
+private extension MovieListViewModel {
+  func handleSuccess(data: MovieList) {
+    datasource = data.results
+    title = "\("movie_popular_title".localized) (\(datasource.count))"
+  }
+
+  func handleFailure(error: Error) {
+    errorMessage = "\(error)"
+    showError = true
   }
 }
