@@ -23,6 +23,6 @@ struct MovieRow: View {
 
 struct MovieRow_Previews: PreviewProvider {
   static var previews: some View {
-    MovieRow(movie: Movie(title: "Text title", overview: "This an overview of the movie."))
+    MovieRow(movie: Movie.preview)
   }
 }

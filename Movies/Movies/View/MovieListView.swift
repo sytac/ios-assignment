@@ -11,6 +11,7 @@ import SwiftUI
 
 struct MovieListView: View {
   @ObservedObject var viewModel: MovieListViewModel
+
   init(viewModel: MovieListViewModel = MovieListViewModel()) {
     self.viewModel = viewModel
   }
@@ -28,7 +29,8 @@ struct MovieListView: View {
     }
     .onAppear {
       viewModel.loadData()
-    }.alert(isPresented: $viewModel.showError, content: {
+    }
+    .alert(isPresented: $viewModel.showError, content: {
       Alert(title: Text("alert_error_title".localized), message: Text(viewModel.errorMessage ?? ""))
     })
   }

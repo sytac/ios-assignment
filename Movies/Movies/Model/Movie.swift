@@ -56,4 +56,19 @@ struct Movie: Codable, Identifiable {
     voteAverage = 0.0
     voteCount = 0
   }
+
+  #if DEBUG
+  static var preview: Movie {
+    Movie(
+      title: "Best movie ever",
+      overview: """
+      This an overview of the movie, with a long enough description.
+      This will allow to check long text descriptions. Sed ut perspiciatis,
+      unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+      totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae
+      vitae dicta sunt, explicabo.
+      """
+    )
+  }
+  #endif
 }

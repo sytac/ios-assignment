@@ -9,9 +9,9 @@ import Common
 import Foundation
 
 class MovieListViewModel: MovieListViewModelProtocol {
-  @Published var title: String = "Movies".localized
+  @Published var title = "Movies".localized
   @Published var datasource: [Movie] = []
-  @Published var showError: Bool = false
+  @Published var showError = false
   var errorMessage: String? = nil
   private var timer: Timer = Timer()
 
@@ -20,7 +20,7 @@ class MovieListViewModel: MovieListViewModelProtocol {
     title = "\("Movies".localized) (\(datasource.count))"
     timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { timer in
       self.errorMessage = "alert_error_message".localized
-      self.showError = true
+      self.showError.toggle()
     })
   }
 

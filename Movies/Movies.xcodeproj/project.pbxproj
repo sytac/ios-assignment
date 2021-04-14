@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A8FDD942627318300917A03 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 7A8FDD932627318300917A03 /* NetworkProvider */; };
 		7A9F43FA2625D0DB0047563D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A9F43FC2625D0DB0047563D /* InfoPlist.strings */; };
 		7A9F440A2625D3640047563D /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 7A9F44092625D3640047563D /* Common */; };
 		7A9F44122625E4960047563D /* PlistReader in Frameworks */ = {isa = PBXBuildFile; productRef = 7A9F44112625E4960047563D /* PlistReader */; };
@@ -78,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A8FDD942627318300917A03 /* NetworkProvider in Frameworks */,
 				7A9F44122625E4960047563D /* PlistReader in Frameworks */,
 				7A9F440A2625D3640047563D /* Common in Frameworks */,
 			);
@@ -260,6 +262,7 @@
 			packageProductDependencies = (
 				7A9F44092625D3640047563D /* Common */,
 				7A9F44112625E4960047563D /* PlistReader */,
+				7A8FDD932627318300917A03 /* NetworkProvider */,
 			);
 			productName = Movies;
 			productReference = 7AF4D187262490120064C6CC /* Movies.app */;
@@ -733,6 +736,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7A8FDD932627318300917A03 /* NetworkProvider */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkProvider;
+		};
 		7A9F44092625D3640047563D /* Common */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Common;
