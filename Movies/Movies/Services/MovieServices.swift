@@ -10,7 +10,7 @@ import NetworkProvider
 import PlistReader
 
 enum CommonMovieService {
-  static let supportedLanguages = Set(["en", "es", "nl"])
+  static let supportedLanguages = Set(Bundle.main.localizations)
 
   static var baseURL: String {
     let apiBaseURL: String = try! PlistReader.value(for: "API_BASE_URL")
