@@ -10,6 +10,8 @@ import NetworkProvider
 import PlistReader
 
 enum CommonMovieService {
+  static let supportedLanguages = Set(["en", "es", "nl"])
+
   static var baseURL: String {
     let apiBaseURL: String = try! PlistReader.value(for: "API_BASE_URL")
     let apiVersion: String = try! PlistReader.value(for: "API_VERSION")
@@ -18,6 +20,21 @@ enum CommonMovieService {
 
   static var apiKey: String {
     try! PlistReader.value(for: "API_KEY")
+  }
+
+  static var language: String {
+    guard let current = Locale.current.languageCode,
+          CommonMovieService.supportedLanguages.contains(current) else {
+      return "en"
+    }
+
+    return current
+  }
+
+  static var queryItems: [URLQueryItem] {
+    let apiKeyItem = URLQueryItem(name: "api_key", value: CommonMovieService.apiKey)
+    let language = URLQueryItem(name: "language", value: CommonMovieService.language)
+    return [apiKeyItem, language]
   }
 }
 
@@ -39,7 +56,7 @@ struct PopularMoviesService: NetworkService {
   }
 
   var queryParameters: [URLQueryItem]? {
-    return [URLQueryItem(name: "api_key", value: CommonMovieService.apiKey)]
+    CommonMovieService.queryItems
   }
 
   var timeout: TimeInterval? {
@@ -69,7 +86,7 @@ struct TopRatedMoviesService: NetworkService {
   }
 
   var queryParameters: [URLQueryItem]? {
-    return [URLQueryItem(name: "api_key", value: CommonMovieService.apiKey)]
+    CommonMovieService.queryItems
   }
 
   var timeout: TimeInterval? {
