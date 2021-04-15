@@ -10,10 +10,10 @@ import Common
 
 struct ContentView: View {
   enum TabItem {
-    case movies, more
+    case popular, topRated, more
   }
 
-  @State var selectedItem = TabItem.movies
+  @State var selectedItem = TabItem.popular
 
   var body: some View {
     TabView(selection: $selectedItem) {
@@ -22,7 +22,7 @@ struct ContentView: View {
           Image(systemName: "list.dash")
           Text("movies_tabitem_title".localized)
         }
-        .tag(TabItem.movies)
+        .tag(TabItem.popular)
       Text("more_tabitem_title".localized)
         .tabItem {
           Image(systemName: "ellipsis.circle")

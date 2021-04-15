@@ -9,7 +9,7 @@ import Foundation
 
 struct Movie: Codable, Identifiable {
   let adult: Bool
-  let backdropPath: String
+  let backdropPath: String?
   let genreIDS: [Int]
   let id: Int
   let originalLanguage: String
@@ -17,7 +17,7 @@ struct Movie: Codable, Identifiable {
   let overview: String
   let popularity: Double
   let posterPath: String
-  let releaseDate: String
+  let releaseDate: String?
   let title: String
   let video: Bool
   let voteAverage: Double
