@@ -8,7 +8,9 @@
 
 "movie_popular_title" = "Popular movies";
 "movie_toprated_title" = "Top Rated movies";
-"movies_tabitem_title" = "Movies";
+"tabitem_popular_title" = "Popular";
+"tabitem_toprated_title" = "Top Rated";
+"movies_navbar_title" = "Movies";
 "more_tabitem_title" = "More";
 "alert_error_title" = "Error";
 "alert_error_message" = "Something went wrong!";

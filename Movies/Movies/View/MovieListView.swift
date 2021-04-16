@@ -10,9 +10,9 @@ import Common
 import SwiftUI
 
 struct MovieListView: View {
-  @ObservedObject var viewModel: MovieListViewModel
+  @ObservedObject var viewModel: PopularMovieListViewModel
 
-  init(viewModel: MovieListViewModel = MovieListViewModel()) {
+  init(viewModel: PopularMovieListViewModel = PopularMovieListViewModel()) {
     self.viewModel = viewModel
   }
 

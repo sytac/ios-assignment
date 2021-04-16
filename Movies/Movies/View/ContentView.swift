@@ -19,10 +19,16 @@ struct ContentView: View {
     TabView(selection: $selectedItem) {
       MovieListView()
         .tabItem {
-          Image(systemName: "list.dash")
-          Text("movies_tabitem_title".localized)
+          Image(systemName: "list.star")
+          Text("tabitem_popular_title".localized)
         }
         .tag(TabItem.popular)
+      TopRatedList()
+        .tabItem {
+          Image(systemName: "list.number")
+          Text("tabitem_toprated_title".localized)
+        }
+        .tag(TabItem.topRated)
       Text("more_tabitem_title".localized)
         .tabItem {
           Image(systemName: "ellipsis.circle")

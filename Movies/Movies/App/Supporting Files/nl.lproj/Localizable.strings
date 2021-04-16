@@ -8,7 +8,9 @@
 
 "movie_popular_title" = "Populaire films";
 "movie_toprated_title" = "Best beoordeelde films";
-"movies_tabitem_title" = "Movies";
+"tabitem_popular_title" = "Populaire";
+"tabitem_toprated_title" = "Best beoordeelde";
+"movies_navbar_title" = "Films";
 "more_tabitem_title" = "Meer";
 "alert_error_title" = "Error";
 "alert_error_message" = "Er is iets fout gegaan!";
