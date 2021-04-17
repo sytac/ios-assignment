@@ -24,7 +24,7 @@ class TopRatedListViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .systemOrange
+    view.backgroundColor = .systemBackground
   }
 
   override func viewDidAppear(_ animated: Bool) {

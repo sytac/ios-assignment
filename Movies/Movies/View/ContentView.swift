@@ -29,7 +29,7 @@ struct ContentView: View {
           Text("tabitem_toprated_title".localized)
         }
         .tag(TabItem.topRated)
-      Text("more_tabitem_title".localized)
+      MoreView()
         .tabItem {
           Image(systemName: "ellipsis.circle")
           Text("more_tabitem_title".localized)

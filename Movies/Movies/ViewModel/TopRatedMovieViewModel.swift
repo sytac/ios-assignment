@@ -8,7 +8,7 @@
 import Foundation
 class TopRatedMovieViewModel: ListViewModelProtocol {
   @Published private(set) var title = "movies_navbar_title".localized
-  @Published var datasource: [Movie] = []
+  @Published private(set) var datasource: [Movie] = []
   @Published var showError = false
   var errorMessage: String? = nil
   private var repository: MoviesRepositoryProtocol
