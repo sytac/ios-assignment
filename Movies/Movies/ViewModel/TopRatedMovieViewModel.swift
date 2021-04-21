@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 class TopRatedMovieViewModel: ListViewModelProtocol {
   @Published private(set) var title = "movies_navbar_title".localized
   @Published private(set) var datasource: [Movie] = []
@@ -18,9 +19,5 @@ class TopRatedMovieViewModel: ListViewModelProtocol {
   }
 
   func loadData() {
-  }
-
-  func handleSelectedCell(indexPath: IndexPath) -> Bool {
-    return true
   }
 }

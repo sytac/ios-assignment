@@ -27,15 +27,16 @@ struct MovieListView: View {
       }
       .navigationTitle(viewModel.title)
     }
+    .navigationViewStyle(StackNavigationViewStyle())
     .onAppear {
       viewModel.loadData()
     }
-      .alert(isPresented: $viewModel.showError, content: {
-        Alert(
-          title: Text("alert_error_title".localized),
-          message: Text(viewModel.errorMessage ?? "")
-        )
-      })
+    .alert(isPresented: $viewModel.showError, content: {
+      Alert(
+        title: Text("alert_error_title".localized),
+        message: Text(viewModel.errorMessage ?? "")
+      )
+    })
   }
 }
 

@@ -1,4 +1,4 @@
-struct MovieList: Codable {
+struct MovieList: Decodable {
   let page: Int
   let results: [Movie]
   let totalPages: Int

@@ -10,7 +10,7 @@ import Foundation
 
 class PopularMovieListViewModel: ListViewModelProtocol {
   @Published private(set) var title = "movies_navbar_title".localized
-  @Published var datasource: [Movie] = []
+  @Published private(set) var datasource: [PopularMovie] = []
   @Published var showError = false
   var errorMessage: String? = nil
   private var repository: MoviesRepositoryProtocol
@@ -20,7 +20,7 @@ class PopularMovieListViewModel: ListViewModelProtocol {
   }
 
   func loadData() {
-    repository.getPopular(completion: { [weak self] result in
+    repository.getPopular { [weak self] result in
       guard let self = self else { return }
 
       switch result {
@@ -29,17 +29,13 @@ class PopularMovieListViewModel: ListViewModelProtocol {
       case let .failure(error):
         self.handleFailure(error: error)
       }
-    })
-  }
-
-  func handleSelectedCell(indexPath: IndexPath) -> Bool {
-    return true
+    }
   }
 }
 
 private extension PopularMovieListViewModel {
   func handleSuccess(data: MovieList) {
-    datasource = data.results
+    datasource = MovieAdaptor.popular(data.results)
     title = "\("movie_popular_title".localized) (\(datasource.count))"
   }
 

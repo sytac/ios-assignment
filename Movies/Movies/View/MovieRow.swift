@@ -8,21 +8,33 @@
 import SwiftUI
 
 struct MovieRow: View {
-  let movie: Movie
+  @ObservedObject var movie: PopularMovie
+
   var body: some View {
-    VStack(alignment: .leading, spacing: 10) {
-      Text("\(movie.title)")
-      Text("\(movie.overview)")
-        .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
-        .font(.footnote)
-        .foregroundColor(.secondary)
+    HStack(alignment: .center, spacing: 15) {
+      Image(uiImage: movie.image)
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+        .frame(width: 70)
+        .clipped()
+        .cornerRadius(10)
+
+      VStack(alignment: .leading, spacing: 7) {
+        Text("\(movie.title)")
+        Text("\(movie.overview)")
+          .lineLimit(3)
+          .font(.footnote)
+          .foregroundColor(.secondary)
+      }
     }
     .padding(.top, 5)
+    .padding(.bottom, 5)
+    .onAppear(perform: { movie.fetchImage() })
   }
 }
 
 struct MovieRow_Previews: PreviewProvider {
   static var previews: some View {
-    MovieRow(movie: Movie.preview)
+    MovieRow(movie: PopularMovie.preview)
   }
 }

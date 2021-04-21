@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MovieResources {
+enum MovieEndpoint {
   case popular
   case topRated
 }
