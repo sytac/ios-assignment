@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MovieRow: View {
-  @ObservedObject var movie: PopularMovie
+  @StateObject var movie: PopularMovie
 
   var body: some View {
     HStack(alignment: .center, spacing: 15) {
