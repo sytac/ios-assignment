@@ -25,12 +25,12 @@ To retrieve movies related data, the application is using this API
 https://www.themoviedb.org/documentation/api
 
 ### Requisites:
-• The project has to compile without errors.
-• The code has to be clean, efficient and understandable. Remember to
+- The project has to compile without errors.
+- The code should be clean, efficient and understandable. Remember to
 structure your source code correctly (using a nice architecture would
 make this easier).
-• Keep in mind the performance of the application.
-• Use version control in the project to show your progress, commit like you
+- Keep in mind the performance of the application.
+- Use version control in the project to show your progress, commit like you
 would normally.
 
 If you have any technical issue or problem send me an email
