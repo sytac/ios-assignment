@@ -17,18 +17,18 @@ class MoviesRepository: MoviesRepositoryProtocol {
   func getPopular() {
 //    movieList = Bundle.main.decode(MovieList.self, from: "sample_movie_list_big.json")
     client = MovieServiceClient(clientService: PopularMoviesService())
-    client!.request(dataType: MovieList.self, onQueue: .main) { result in
-      do {
-        self.movieList = try result.get()
-      } catch {
-        self.error = error
-      }
-    }
+    fetchMovies(client: client!)
   }
 
   func getTopRated() {
     client = MovieServiceClient(clientService: TopRatedMoviesService())
-    client!.request(dataType: MovieList.self, onQueue: .main) { result in
+    fetchMovies(client: client!)
+  }
+}
+
+private extension MoviesRepository {
+  func fetchMovies(client: NetworkProviderProtocol) {
+    client.request(dataType: MovieList.self, onQueue: .main) { result in
       do {
         self.movieList = try result.get()
       } catch {
