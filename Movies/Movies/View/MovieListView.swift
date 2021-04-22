@@ -20,7 +20,7 @@ struct MovieListView: View {
     NavigationView {
       List {
         ForEach(viewModel.datasource) { movie in
-          NavigationLink(destination: Text("To be implemented")) {
+          NavigationLink(destination: Text(movie.title)) {
             MovieRow(movie: movie)
           }
         }
