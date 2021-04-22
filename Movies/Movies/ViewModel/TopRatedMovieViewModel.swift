@@ -18,6 +18,5 @@ class TopRatedMovieViewModel: ListViewModelProtocol {
     self.repository = repository
   }
 
-  func loadData() {
-  }
+  func loadData() {}
 }
