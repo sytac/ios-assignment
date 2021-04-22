@@ -21,8 +21,8 @@ class MoviesRepository: MoviesRepositoryProtocol {
   }
 
   func getTopRated() {
-    client = MovieServiceClient(clientService: TopRatedMoviesService())
-    fetchMovies(client: client!)
+    let client = MovieServiceClient(clientService: TopRatedMoviesService())
+    fetchMovies(client: client)
   }
 }
 
