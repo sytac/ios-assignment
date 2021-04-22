@@ -15,7 +15,6 @@ struct MoreView: View {
         .aspectRatio(contentMode: .fit)
         .frame(
           width: 250,
-          height: 100,
           alignment: /*@START_MENU_TOKEN@*/ .center/*@END_MENU_TOKEN@*/
         )
         .padding()

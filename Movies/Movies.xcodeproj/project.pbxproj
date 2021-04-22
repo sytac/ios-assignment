@@ -23,7 +23,6 @@
 		7A8FDDA026273E2E00917A03 /* MovieServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FDD9F26273E2E00917A03 /* MovieServiceClient.swift */; };
 		7A8FDDAF2627447B00917A03 /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FDDAE2627447B00917A03 /* MoviesRepository.swift */; };
 		7A8FDDBD2627455600917A03 /* MoviesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FDDBC2627455600917A03 /* MoviesRepositoryProtocol.swift */; };
-		7A8FDDC526274A0F00917A03 /* MovieResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FDDC426274A0F00917A03 /* MovieResources.swift */; };
 		7A9F43FA2625D0DB0047563D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7A9F43FC2625D0DB0047563D /* InfoPlist.strings */; };
 		7A9F440A2625D3640047563D /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 7A9F44092625D3640047563D /* Common */; };
 		7A9F44122625E4960047563D /* PlistReader in Frameworks */ = {isa = PBXBuildFile; productRef = 7A9F44112625E4960047563D /* PlistReader */; };
@@ -77,7 +76,6 @@
 		7A8FDD9F26273E2E00917A03 /* MovieServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceClient.swift; sourceTree = "<group>"; };
 		7A8FDDAE2627447B00917A03 /* MoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
 		7A8FDDBC2627455600917A03 /* MoviesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepositoryProtocol.swift; sourceTree = "<group>"; };
-		7A8FDDC426274A0F00917A03 /* MovieResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MovieResources.swift; path = Movies/Services/MovieResources.swift; sourceTree = SOURCE_ROOT; };
 		7A9F43FB2625D0DB0047563D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7A9F44002625D0DF0047563D /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7A9F44012625D0E00047563D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 		7A8FDDAD2627445300917A03 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				7A8FDDC426274A0F00917A03 /* MovieResources.swift */,
 				7A8FDDBC2627455600917A03 /* MoviesRepositoryProtocol.swift */,
 				7A8FDDAE2627447B00917A03 /* MoviesRepository.swift */,
 			);
@@ -277,8 +274,8 @@
 				7AF4D18C262490120064C6CC /* ContentView.swift */,
 				7AF4D1DC2625ACC60064C6CC /* MovieListView.swift */,
 				7AF4D1E12625AD590064C6CC /* MovieRow.swift */,
-				7A7B8EAE2629E14500FA734C /* TopRatedListViewController.swift */,
 				7A7B8EB32629E27B00FA734C /* TopRatedList.swift */,
+				7A7B8EAE2629E14500FA734C /* TopRatedListViewController.swift */,
 				7A7B8EC9262AE03600FA734C /* MoreView.swift */,
 			);
 			path = View;
@@ -458,7 +455,6 @@
 				7A8FDDAF2627447B00917A03 /* MoviesRepository.swift in Sources */,
 				7A625ACC262DA8780037B72E /* TopRatedMoviesService.swift in Sources */,
 				7A9F441A2625E6860047563D /* ListViewModelProtocol.swift in Sources */,
-				7A8FDDC526274A0F00917A03 /* MovieResources.swift in Sources */,
 				7AF4D18B262490120064C6CC /* MoviesApp.swift in Sources */,
 				7A8FDD9B26273DE400917A03 /* CommonServices.swift in Sources */,
 				7AF4D1FB2625B3E50064C6CC /* Movie.swift in Sources */,
