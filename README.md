@@ -16,7 +16,7 @@ The time has come for us to unveil the code challenge Sytac has prepared for you
 9. Implement load more functionality for Popular movies list screen.
 
 
-You have total freedom to modify the codebase, there are no constraints on the design/layout of the TopRated screen. The TopRated List and detail view should be created programmatically only (no Interface Builder and neither SwiftUI). 
+You have total freedom to modify the codebase, there are no constraints on the design/layout of the TopRated screen. The TopRated List and detail view should be created programmatically only (no Interface Builder nor SwiftUI). 
 
 ##### Notes: The Movies project works with Xcode 12 and up and the language used is Swift.
 
