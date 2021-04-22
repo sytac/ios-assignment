@@ -5,31 +5,36 @@
 //  Created by xdmgzdev on 13/04/2021.
 //
 
+import Combine
 import Common
-import Foundation
 
 class PopularMovieListViewModel: ListViewModelProtocol {
   @Published private(set) var title = "movies_navbar_title".localized
   @Published private(set) var datasource: [PopularMovie] = []
   @Published var showError = false
-  var errorMessage: String? = nil
+  var errorMessage: String?
   private var repository: MoviesRepositoryProtocol
+  private var cancellables = Set<AnyCancellable>()
 
   init(repository: MoviesRepositoryProtocol = MoviesRepository()) {
     self.repository = repository
   }
 
   func loadData() {
-    repository.getPopular { [weak self] result in
-      guard let self = self else { return }
+    guard let moviesRepo = repository as? MoviesRepository else { return }
+    
+    moviesRepo.getPopular()
 
-      switch result {
-      case let .success(list):
-        self.handleSuccess(data: list)
-      case let .failure(error):
-        self.handleFailure(error: error)
-      }
+    moviesRepo.$movieList.sink { movies in
+      self.handleSuccess(data: movies)
     }
+    .store(in: &cancellables)
+
+    moviesRepo.$error.sink { error in
+      guard let someError = error else { return }
+      self.handleFailure(error: someError)
+    }
+    .store(in: &cancellables)
   }
 }
 

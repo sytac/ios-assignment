@@ -8,6 +8,6 @@
 import Foundation
 
 protocol MoviesRepositoryProtocol {
-  func getPopular(completion: @escaping (Result<MovieList, Swift.Error>) -> Void)
-  func getTopRated(completion: @escaping (Result<MovieList, Swift.Error>) -> Void)
+  func getPopular()
+  func getTopRated()
 }
