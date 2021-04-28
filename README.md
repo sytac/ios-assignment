@@ -6,13 +6,13 @@ The time has come for us to unveil the code challenge Sytac has prepared for you
 ### Questions
 
 1. Provide a high-level review of the application. Give your opinion on both aspects you consider positive and aspects you consider negative. Describe how and why would you do things differently.  
-2. The logic of ImageCache hides an issue. Try to discover and fix it. (runningRequests not being cleaned) 
-3. Replace the binding between Repository and View model  without combine.
+2. The logic of ImageCache hides an issue. Try to discover and fix it.
+3. Replace the binding between Repository and View model without combine.
 4. Replace the Popular detail view with a new custom detail view. This view should display a detail with the info of the model movie model. Please use SwiftUI for the detailed view.
-5. Replace the TopRated tab with a new list view. This view should display a list of the TopRated movies and it must be implemented programmatically using UIKit
-6. Write unit tests where you need.
-7. @StateObject vs. @ObservableObject
-8. In PopularMoviesListViewModel we ask for popular movies, using the current implementation fetch top rated movies instead, and explain what is happening.
+5. Replace the TopRated tab with a new list view. This view should display a list of the TopRated movies and it must be implemented programmatically using UIKit.
+6. Write unit tests whereever you need them.
+7. In MoviewRow.swift line 11 we use @StateObject, could we change it with @ObservableObject? what are the differences?
+8. In PopularMoviesListViewModel.swift we ask for popular movies, using the current implementation fetch top rated movies instead, and explain what is happening.
 9. Implement load more functionality for Popular movies list screen.
 
 
@@ -32,6 +32,7 @@ make this easier).
 - Keep in mind the performance of the application.
 - Use version control in the project to show your progress, commit like you
 would normally.
+- We would like to see at least the first 5 questions solved, the more you provide the better.
 
 If you have any technical issue or problem send me an email
 marcos.gonzalez@sytac.io
