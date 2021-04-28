@@ -15,14 +15,13 @@ class MoviesRepository: MoviesRepositoryProtocol {
   @Published var error: Swift.Error?
 
   func getPopular() {
-//    movieList = Bundle.main.decode(MovieList.self, from: "sample_movie_list_big.json")
     client = MovieServiceClient(clientService: PopularMoviesService())
     fetchMovies(client: client!)
   }
 
   func getTopRated() {
-    client = MovieServiceClient(clientService: TopRatedMoviesService())
-    fetchMovies(client: client!)
+    let client = MovieServiceClient(clientService: TopRatedMoviesService())
+    fetchMovies(client: client)
   }
 }
 
