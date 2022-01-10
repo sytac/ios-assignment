@@ -8,16 +8,16 @@
       location = "group:Packages"
       name = "Packages">
       <FileRef
+         location = "group:Common">
+      </FileRef>
+      <FileRef
+         location = "group:NetworkProvider">
+      </FileRef>
+      <FileRef
          location = "group:ImageCache">
       </FileRef>
       <FileRef
-         location = "group:/Users/xdmgzdev/iOSWorkspace/sytac/ios-assignment/Packages/NetworkProvider">
-      </FileRef>
-      <FileRef
          location = "group:PlistReader">
-      </FileRef>
-      <FileRef
-         location = "group:/Users/xdmgzdev/iOSWorkspace/sytac/ios-assignment/Packages/Common">
       </FileRef>
    </Group>
 </Workspace>
