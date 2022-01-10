@@ -11,7 +11,7 @@ The time has come for us to unveil the code challenge Sytac has prepared for you
 4. Replace the Popular detail view with a new custom detail view. This view should display a detail with the info of the model movie model. Please use SwiftUI for the detailed view.
 5. Replace the TopRated tab with a new list view. This view should display a list of the TopRated movies and it must be implemented programmatically using UIKit.
 6. Write unit tests whereever you need them.
-7. In MoviewRow.swift line 11 we use @StateObject, could we change it with @ObservableObject? what are the differences?
+7. In MoviewRow.swift line 11 we use @StateObject, could we change it with @ObservedObject? what are the differences?
 8. In PopularMoviesListViewModel.swift we ask for popular movies, using the current implementation fetch top rated movies instead, and explain what is happening.
 9. Implement load more functionality for Popular movies list screen.
 
