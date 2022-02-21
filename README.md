@@ -5,7 +5,7 @@ The time has come for us to unveil the code challenge Sytac has prepared for you
 
 ### Questions
 
-1. Provide a high-level review of the application. Give your opinion on both aspects you consider positive and aspects you consider negative. Describe how and why would you do things differently.  
+1. Provide a high-level review of the application. Give your opinion on both aspects you consider positive and aspects you consider negative. Describe how and why would you do things differently.
 2. The logic of ImageCache hides an issue. Try to discover and fix it.
 3. Replace the binding between Repository and View model without combine.
 4. Replace the Popular detail view with a new custom detail view. This view should display a detail with the info of the model movie model. Please use SwiftUI for the detailed view.
@@ -16,11 +16,10 @@ The time has come for us to unveil the code challenge Sytac has prepared for you
 9. Implement load more functionality for Popular movies list screen.
 
 
-You have total freedom to modify the codebase, there are no constraints on the design/layout of the TopRated screen. The TopRated List and detail view should be created programmatically only (no Interface Builder nor SwiftUI). 
+You have total freedom to modify the codebase, there are no constraints on the design/layout of the TopRated screen. The TopRated List and detail view should be created programmatically only (no Interface Builder nor SwiftUI).
+### Important: Once you are ready with the solution, please create a PR to `main`. We will receive a notification that your solution is ready for review, and assign one of our colleagues to it.
 
-### Important: Once you are ready with the solution, please create a PR to `main`. 
-
-##### Notes: The Movies project works with Xcode 12 and up and the language used is Swift.
+##### **Notes: The Movies project works with Xcode 12 and up and the language used is Swift.**
 
 ### Backend:
 To retrieve movies related data, the application is using this API
@@ -36,11 +35,14 @@ make this easier).
 would normally.
 - We would like to see at least the first 5 questions solved, the more you provide the better.
 
-If you have any technical issue or problem send me an email
-marcos.gonzalez@sytac.io
+If you have any technical issue or problem, please reach out to your recruiter and we will try to answer as soon as possible.
 
 Good luck!
 
+## Tips
+- We value quality over quantity.
+- Share any information you believe would help the reviewer understand better your solution.
+- Deliver production ready code.
 ## License
 
 MIT
